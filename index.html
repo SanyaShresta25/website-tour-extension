@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Website Tour Guide</title>
+  <link rel="stylesheet" href="tour.css" />
+</head>
+<body>
+
+  <h1 id="title">Welcome</h1>
+  <button id="login">Login</button>
+  <button id="signup">Sign Up</button>
+
+  <script src="tour.js"></script>
+  <script>
+    startTour([
+      {
+        selector: "#title",
+        title: "Welcome",
+        text: "This is the main heading of the page"
+      },
+      {
+        selector: "#login",
+        title: "Login Button",
+        text: "Click here if you already have an account"
+      },
+      {
+        selector: "#signup",
+        title: "Sign Up",
+        text: "Create a new account from here"
+      }
+    ]);
+  </script>
+</body>
+</html>

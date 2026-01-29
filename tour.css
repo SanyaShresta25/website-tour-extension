@@ -1,0 +1,65 @@
+/* Overlay */
+.tour-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 9998;
+}
+
+/* Highlight box */
+.tour-highlight {
+  position: fixed;
+  border: 3px solid #6366f1;
+  border-radius: 8px;
+  box-shadow: 0 0 0 9999px rgba(0,0,0,0.65);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Tooltip */
+.tour-tooltip {
+  position: fixed;
+  background: white;
+  color: #111;
+  padding: 14px;
+  width: 260px;
+  border-radius: 10px;
+  z-index: 10000;
+  font-family: system-ui, sans-serif;
+}
+
+.tour-tooltip h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.tour-tooltip p {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.tour-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour-buttons button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tour-next {
+  background: #6366f1;
+  color: white;
+}
+
+.tour-back {
+  background: #e5e7eb;
+}
+
+.tour-close {
+  background: transparent;
+  color: #6b7280;
+}
