@@ -1,57 +1,86 @@
 .tour-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 999999;
+  background: rgba(0,0,0,0.7);
+  z-index: 999998;
 }
 
 .tour-highlight {
   position: fixed;
+  border-radius: 14px;
   border: 3px solid #6366f1;
-  border-radius: 8px;
-  z-index: 1000000;
-  pointer-events: none;
+  box-shadow:
+    0 0 0 6px rgba(99,102,241,.25),
+    0 0 40px rgba(99,102,241,.6);
+  z-index: 999999;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 6px rgba(99,102,241,.25); }
+  50% { box-shadow: 0 0 0 12px rgba(99,102,241,.45); }
 }
 
 .tour-tooltip {
   position: fixed;
-  width: 260px;
-  background: #ffffff;
-  color: #111;
-  padding: 14px;
-  border-radius: 10px;
-  font-family: system-ui, sans-serif;
-  z-index: 1000001;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 340px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  z-index: 1000000;
+  box-shadow: 0 30px 70px rgba(0,0,0,.35);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tour-progress {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.tour-progress .bar {
+  height: 100%;
+  background: linear-gradient(90deg,#6366f1,#ec4899);
+}
+
+.tour-step {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
 }
 
 .tour-tooltip h3 {
-  margin: 0 0 6px;
-  font-size: 16px;
+  margin: 4px 0 6px;
+  font-size: 18px;
 }
 
 .tour-tooltip p {
-  margin: 0 0 12px;
-  font-size: 14px;
+  margin: 0 0 14px;
+  color: #555;
+  line-height: 1.5;
 }
 
-.tour-buttons {
+.actions {
   display: flex;
   justify-content: space-between;
 }
 
-.tour-buttons button {
+.actions button {
   border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.next {
+.actions .next {
   background: #6366f1;
   color: white;
 }
 
-.back {
-  background: #e5e7eb;
+.actions .skip {
+  background: transparent;
+  color: #777;
 }
